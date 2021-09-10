@@ -8,3 +8,4 @@ export const prodcutReducer = (state=[],{type,payload}) =>{
             return state;
     }
 }
+

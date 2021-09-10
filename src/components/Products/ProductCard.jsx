@@ -7,6 +7,7 @@ import {
   CardActionArea,
   CardActions,
   Typography,
+  Button
 } from "@material-ui/core";
 
 const ProductCard = ({title,image,price,description,category}) => {
@@ -15,12 +16,13 @@ const ProductCard = ({title,image,price,description,category}) => {
       <Card>
           <CardActionArea>
               <CardMedia title={title} image={image} />
+              
               <CardContent>
                   <Typography title={category} />
               </CardContent>
           </CardActionArea>
           <CardActions>
-              
+              <Button variant='contained' color='primary'>Add To Cart</Button>
           </CardActions>
       </Card>
     </div>
