@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <div>
             <AppBarHeader handleOpenMenu={handleOpenMenu} />
-            <DrawerHeader open={open} />
+            <DrawerHeader open={open} handleCloseMenu={handleCloseMenu} />
         </div>
     );
 };

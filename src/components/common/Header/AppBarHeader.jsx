@@ -1,7 +1,7 @@
 import React from "react";
 //? Materai UI Components
 import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
-import MenuIcon from '@material-ui/icons/Menu'
+import MenuIcon from "@material-ui/icons/Menu";
 
 const AppBarHeader = ({ handleOpenMenu }) => {
   return (
@@ -14,7 +14,7 @@ const AppBarHeader = ({ handleOpenMenu }) => {
             color="inherit"
             aria-label="menu"
           >
-              <MenuIcon />
+            <MenuIcon />
           </IconButton>
           <Typography as="h5">Material UI</Typography>
         </Toolbar>
