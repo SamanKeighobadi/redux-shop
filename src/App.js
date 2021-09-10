@@ -1,9 +1,14 @@
+import {Route,Switch} from 'react-router-dom'
 import AppContainer from "./components/containers/AppContainer";
 
 const App = () => {
   return (
     <div>
-      <AppContainer />
+      <Switch>
+        <Route path='/' exact component={AppContainer} />
+        <Route path="/login" render={() => (<h3>login</h3>)} />
+        <Route path="/register" render={() => (<h3>register page</h3>)} />
+      </Switch>
     </div>
   )
 }
