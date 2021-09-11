@@ -14,6 +14,7 @@ import {
   ShoppingCart,
   Person,
   PersonAdd,
+  Home
 } from "@material-ui/icons";
 
 const DrawerHeader = ({ open, handleCloseMenu }) => {
@@ -26,6 +27,15 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
               <ChevronLeft />
             </ListItemIcon>
           </ListItem>
+
+          <Link to="/">
+            <ListItem button>
+              <ListItemIcon>
+                <Home />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
 
           <Link to="/cart">
             <ListItem button>

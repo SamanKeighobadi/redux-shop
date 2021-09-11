@@ -1,10 +1,16 @@
 import React from "react";
 // Material UI Component
 import { Typography, Button, TextField, Container } from "@material-ui/core";
+// React Helmet
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   return (
     <Container>
+    {/* React Helmet */}
+    <Helmet>
+        <title>Login Page</title>
+    </Helmet>
       <Typography variant="h3" style={{ margin: "12px 0" }} component="h3">
         Login
       </Typography>
