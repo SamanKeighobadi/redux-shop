@@ -1,16 +1,18 @@
 import {Route,Switch} from 'react-router-dom'
-// Import components
-import AppContainer from "./components/containers/AppContainer";
 // MainLayout 
 import MainLayout from './components/layouts/MainLayout';
+// Import components
+import AppContainer from "./components/containers/AppContainer";
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 const App = () => {
   return (
     <MainLayout>
       <Switch>
         <Route path='/' exact component={AppContainer} />
-        <Route path="/login" render={() => (<h3>login</h3>)} />
-        <Route path="/register" render={() => (<h3>register page</h3>)} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
       </Switch>
     </MainLayout>
   )
