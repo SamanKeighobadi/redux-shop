@@ -7,23 +7,33 @@ import {
   CardActionArea,
   CardActions,
   Typography,
-  Button
+  Button,
 } from "@material-ui/core";
 
-const ProductCard = ({title,image,price,description,category}) => {
+const ProductCard = ({ title, image, price, description, category }) => {
   return (
     <div>
-      <Card>
-          <CardActionArea>
-              <CardMedia title={title} image={image} />
-              
-              <CardContent>
-                  <Typography title={category} />
-              </CardContent>
-          </CardActionArea>
-          <CardActions>
-              <Button variant='contained' color='primary'>Add To Cart</Button>
-          </CardActions>
+      <Card >
+        <CardActionArea>
+          <CardMedia image={image} component={'img'} title={title} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title.slice(0,20)}
+            </Typography>
+            <Typography gutterBottom variant='span' >
+             Category: {category}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" variant={'contained'} color="primary">
+            Add To Cart
+          </Button>
+        <Button>
+          {price}
+        </Button>
+
+        </CardActions>
       </Card>
     </div>
   );

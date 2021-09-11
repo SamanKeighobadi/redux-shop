@@ -1,10 +1,12 @@
 import React from 'react';
-
+import {ClipLoader} from 'react-spinners'
+// Materail UI Components 
+import {Container} from '@material-ui/core'
 const Loading = () => {
     return (
-        <div>
-            <h1>Loading...</h1>
-        </div>
+        <Container maxWidth={'xs'} >
+            <ClipLoader size={100} color="#8447ae"  />
+        </Container>
     );
 };
 
