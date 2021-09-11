@@ -6,7 +6,7 @@ const Register = () => {
   return (
     <Container>
       <Typography variant="h3" style={{ margin: "12px 0 " }} component="h3">
-        Login
+        Register
       </Typography>
       <TextField
         id="fullname"
