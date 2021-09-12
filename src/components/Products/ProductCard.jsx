@@ -8,9 +8,15 @@ import {
   CardActions,
   Typography,
   Button,
+  makeStyles,
 } from "@material-ui/core";
+import {useStyles} from "../customHooks/useStyles";
+
 
 const ProductCard = ({ title, image, price, category }) => {
+
+  const classes = useStyles()
+
   return (
     <div>
       <Card >
@@ -26,7 +32,7 @@ const ProductCard = ({ title, image, price, category }) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" variant={'contained'} color="primary">
+          <Button className={classes.btn} size="small" variant={'contained'} color="primary">
             Add To Cart
           </Button>
         <Button>
