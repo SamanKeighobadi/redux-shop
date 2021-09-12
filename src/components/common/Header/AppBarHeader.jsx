@@ -16,7 +16,7 @@ const AppBarHeader = ({ handleOpenMenu }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography as="h5">Material UI</Typography>
+          <Typography as="h4">Redux Shop</Typography>
         </Toolbar>
       </AppBar>
     </div>

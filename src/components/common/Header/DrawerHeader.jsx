@@ -14,13 +14,13 @@ import {
   ShoppingCart,
   Person,
   PersonAdd,
-  Home
+  Home,
 } from "@material-ui/icons";
 
 const DrawerHeader = ({ open, handleCloseMenu }) => {
   return (
     <div>
-      <Drawer anchor={"left"} open={open} variant="persistent">
+      <Drawer anchor={"left"} open={open} variant="temporary">
         <List component="nav" aria-label="main mailbox folders">
           <ListItem button onClick={handleCloseMenu}>
             <ListItemIcon>
@@ -29,7 +29,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           </ListItem>
 
           <Link to="/">
-            <ListItem button>
+            <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -38,7 +38,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           </Link>
 
           <Link to="/cart">
-            <ListItem button>
+            <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <ShoppingCart />
               </ListItemIcon>
@@ -47,7 +47,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           </Link>
 
           <Link to="/login">
-            <ListItem button>
+            <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <Person />
               </ListItemIcon>
@@ -56,7 +56,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           </Link>
 
           <Link to="/register">
-            <ListItem button>
+            <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <PersonAdd />
               </ListItemIcon>

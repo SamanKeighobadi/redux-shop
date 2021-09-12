@@ -26,7 +26,7 @@ const ProductCards = () => {
       ) : (
         <Grid container>
           {products.map((product) => (
-            <Grid item lg={3} key={product.id}>
+            <Grid  item lg={3} key={product.id}>
               <ProductCard
                 title={product.title}
                 image={product.image}
