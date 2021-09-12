@@ -5,7 +5,6 @@ import {
   Container,
   Typography,
   Button,
-  makeStyles,
 } from "@material-ui/core";
 // React Helmet
 import { Helmet } from "react-helmet";

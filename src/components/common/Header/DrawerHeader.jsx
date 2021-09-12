@@ -35,7 +35,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           <Link to="/" className={classes.listItem} >
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
-                <Home />
+                <Home color='primary' />
               </ListItemIcon>
               <ListItemText  primary="Home" />
             </ListItem>
@@ -44,7 +44,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           <Link to="/cart" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
-                <ShoppingCart />
+                <ShoppingCart color='primary' />
               </ListItemIcon>
               <ListItemText primary="Cart" />
             </ListItem>
@@ -53,7 +53,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           <Link to="/login" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
-                <Person />
+                <Person color='primary' />
               </ListItemIcon>
               <ListItemText primary="Login" />
             </ListItem>
@@ -62,7 +62,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
           <Link to="/register" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
-                <PersonAdd />
+                <PersonAdd color='primary' />
               </ListItemIcon>
               <ListItemText primary="Register" />
             </ListItem>

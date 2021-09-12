@@ -13,11 +13,18 @@ export const useStyles = makeStyles({
   },
   imageCard:{
       height:300,
-      padding:'12px',
+      padding:'10px',
       
   },
   card:{
-      margin:'20px 0'
+      margin:'20px 0',
   },
-  
+  loadingContainer:{
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    textAlign:'center',
+    marginTop:'200px'
+  },
+ 
 });

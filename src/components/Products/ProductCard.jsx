@@ -9,6 +9,8 @@ import {
   Typography,
   Button,
 } from "@material-ui/core";
+import {AttachMoney} from '@material-ui/icons'
+
 import {useStyles} from "../customHooks/useStyles";
 
 
@@ -34,8 +36,8 @@ const ProductCard = ({ title, image, price, category }) => {
           <Button className={classes.btn} size="small" variant={'contained'} color="primary">
             Add To Cart
           </Button>
-        <Button>
-          {price}
+        <Button variant='text' color='secondary'>
+          {price} <AttachMoney fontSize='small' />
         </Button>
 
         </CardActions>
