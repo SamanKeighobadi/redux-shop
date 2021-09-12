@@ -3,8 +3,20 @@ import React from "react";
 import { TextField, Container, Typography, Button } from "@material-ui/core";
 // React Helmet
 import { Helmet } from "react-helmet";
+// Formik and form validation
+import {useFormik} from 'formik'
+
 
 const Register = () => {
+
+  const formik = useFormik({
+    initialValues:{
+      fullname:"",
+      email:"",
+      password:"",
+    },validationSchema:{}
+  })
+
   return (
     <Container>
     {/* React Helmet */}
