@@ -14,7 +14,7 @@ const Register = () => {
       email: "",
       password: "",
     },
-    validationSchema: { registerValidationShema },
+    validationSchema: registerValidationShema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, 2, null));
     },
@@ -26,7 +26,7 @@ const Register = () => {
       <Helmet>
         <title>Register Page</title>
       </Helmet>
-      <form onSubmit={formik.handleSubmit} >
+      <form onSubmit={formik.handleSubmit}>
         <Typography variant="h3" style={{ margin: "12px 0 " }} component="h3">
           Register
         </Typography>
@@ -34,7 +34,6 @@ const Register = () => {
           id="fullname"
           label="Fullname"
           type="text"
-          required
           fullWidth
           size="small"
           variant="outlined"
@@ -47,7 +46,6 @@ const Register = () => {
           id="email"
           label="Email"
           type="email"
-          required
           fullWidth
           variant="outlined"
           size="small"

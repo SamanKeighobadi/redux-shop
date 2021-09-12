@@ -8,6 +8,7 @@ export const loginValidationShema = yup.object().shape({
     .email("Email not Valid"),
   password: yup
     .string()
+    .required("This Field is Required")
     .min(4, "least than 4 char")
     .max(125, "more than 125 char")
     .trim(),

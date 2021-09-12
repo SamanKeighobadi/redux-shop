@@ -10,7 +10,7 @@ import {
   Button,
 } from "@material-ui/core";
 
-const ProductCard = ({ title, image, price, description, category }) => {
+const ProductCard = ({ title, image, price, category }) => {
   return (
     <div>
       <Card >
@@ -20,7 +20,7 @@ const ProductCard = ({ title, image, price, description, category }) => {
             <Typography gutterBottom variant="h5" component="h2">
               {title.slice(0,20)}
             </Typography>
-            <Typography gutterBottom variant='span' >
+            <Typography gutterBottom variant='subtitle2' >
              Category: {category}
             </Typography>
           </CardContent>

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+// Material UI Components
 import { Grid } from "@material-ui/core";
+// Redux Tools
+import { useSelector, useDispatch } from "react-redux";
+import { setProducts } from "../../redux/actions/productActions";
+// Import Custom Hooks
+import useProducts from "../customHooks/useProducts";
+// Import Custom Components
 import ProductCard from "./ProductCard";
-import axios from "axios";
 import Loading from "../common/Loading";
 
 const ProductCards = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // Custom hook
+  const { data, loading } = useProducts("https://fakestoreapi.com/products");
 
-  const fetchProducts = async () => {
-    const { data } = await axios.get("https://fakestoreapi.com/products");
-    setProducts(data);
-    setLoading(false);
-    console.log(data);
-  };
+  const products = useSelector((state) => state.allProducts.products);
+  const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    fetchProducts();
-  }, []);
+  dispatch(setProducts(data));
 
   return (
     <>
@@ -30,7 +30,6 @@ const ProductCards = () => {
               <ProductCard
                 title={product.title}
                 image={product.image}
-                description={product.description}
                 category={product.category}
               />
             </Grid>

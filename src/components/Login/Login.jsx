@@ -13,7 +13,7 @@ const Login = () => {
       email: "",
       password: "",
     },
-    validationSchema: { loginValidationShema },
+    validationSchema: loginValidationShema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -35,7 +35,6 @@ const Login = () => {
           id="email"
           label="Email"
           size="small"
-          required
           variant="outlined"
           onChange={formik.handleChange}
           value={formik.values.email}
@@ -47,7 +46,6 @@ const Login = () => {
           fullWidth
           id="password"
           label="Password"
-          required
           size="small"
           variant="outlined"
           onChange={formik.handleChange}

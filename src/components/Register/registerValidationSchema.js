@@ -12,5 +12,10 @@ export const registerValidationShema = yup.object().shape({
     .email("Email not Valid")
     .required("This Feild is required")
     .trim(),
-    password:yup.string().required("This Field is required").min(4,'least than 4 char').max(125,'more than 125')
+  password: yup
+    .string()
+    .required("This Field is required")
+    .min(4, "least than 4 char")
+    .max(125, "more than 125")
+    .trim(),
 });
