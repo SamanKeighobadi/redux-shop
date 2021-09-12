@@ -14,10 +14,11 @@ export const useStyles = makeStyles({
   imageCard:{
       height:300,
       padding:'10px',
-      
+      objectFit:'contain'
   },
   card:{
-      margin:'20px 0',
+      margin:'20px 0 0 0',
+
   },
   loadingContainer:{
     display:'flex',
