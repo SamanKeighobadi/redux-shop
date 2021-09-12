@@ -9,6 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
+// Material UI Icons
 import {
   ChevronLeft,
   ShoppingCart,
@@ -16,28 +17,31 @@ import {
   PersonAdd,
   Home,
 } from "@material-ui/icons";
+import { useStyles } from "../../customHooks/useStyles";
 
 const DrawerHeader = ({ open, handleCloseMenu }) => {
+  const classes = useStyles();
+
   return (
     <div>
       <Drawer anchor={"left"} open={open} variant="temporary">
         <List component="nav" aria-label="main mailbox folders">
-          <ListItem button onClick={handleCloseMenu}>
+          <ListItem className={classes.drawer} button onClick={handleCloseMenu}>
             <ListItemIcon>
               <ChevronLeft />
             </ListItemIcon>
           </ListItem>
 
-          <Link to="/">
+          <Link to="/" className={classes.listItem} >
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
-              <ListItemText primary="Home" />
+              <ListItemText  primary="Home" />
             </ListItem>
           </Link>
 
-          <Link to="/cart">
+          <Link to="/cart" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <ShoppingCart />
@@ -46,7 +50,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
             </ListItem>
           </Link>
 
-          <Link to="/login">
+          <Link to="/login" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <Person />
@@ -55,7 +59,7 @@ const DrawerHeader = ({ open, handleCloseMenu }) => {
             </ListItem>
           </Link>
 
-          <Link to="/register">
+          <Link to="/register" className={classes.listItem}>
             <ListItem button onClick={handleCloseMenu}>
               <ListItemIcon>
                 <PersonAdd />

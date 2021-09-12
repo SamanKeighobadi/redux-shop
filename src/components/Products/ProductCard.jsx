@@ -8,7 +8,6 @@ import {
   CardActions,
   Typography,
   Button,
-  makeStyles,
 } from "@material-ui/core";
 import {useStyles} from "../customHooks/useStyles";
 
@@ -19,9 +18,9 @@ const ProductCard = ({ title, image, price, category }) => {
 
   return (
     <div>
-      <Card >
+      <Card className={classes.card} >
         <CardActionArea>
-          <CardMedia image={image} component={'img'} title={title} />
+          <CardMedia className={classes.imageCard} image={image} component={'img'} title={title} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {title.slice(0,20)}

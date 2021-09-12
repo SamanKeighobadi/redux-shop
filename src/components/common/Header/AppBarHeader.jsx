@@ -4,9 +4,11 @@ import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const AppBarHeader = ({ handleOpenMenu }) => {
+
+
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="sticky" >
         <Toolbar>
           <IconButton
             onClick={handleOpenMenu}

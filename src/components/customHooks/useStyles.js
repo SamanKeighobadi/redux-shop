@@ -4,5 +4,20 @@ export const useStyles = makeStyles({
   textInput: {
     margin: "15px 0",
   },
-  title: {},
+  drawer: {
+    width: "200px",
+  },
+  listItem: {
+    textDecoration: "none",
+    color:"#000",
+  },
+  imageCard:{
+      height:300,
+      padding:'12px',
+      
+  },
+  card:{
+      margin:'20px 0'
+  },
+  
 });
