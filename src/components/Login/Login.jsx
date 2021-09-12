@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 // Formik and form validation
 import { useFormik } from "formik";
 import { loginValidationShema } from "./loginValidationShcema";
+import {useStyles} from '../customHooks/useStyles'
 
 const Login = () => {
   const formik = useFormik({
@@ -19,6 +20,8 @@ const Login = () => {
     },
   });
 
+  const classes = useStyles()
+
   return (
     <Container>
       {/* React Helmet */}
@@ -30,6 +33,7 @@ const Login = () => {
           Login
         </Typography>
         <TextField
+        className={classes.textInput}
           type="email"
           fullWidth
           id="email"
@@ -42,6 +46,7 @@ const Login = () => {
           helperText={formik.touched.email && formik.errors.email}
         />
         <TextField
+        className={classes.textInput}
           type="password"
           fullWidth
           id="password"

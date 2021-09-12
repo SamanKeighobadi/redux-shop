@@ -1,11 +1,18 @@
 import React from "react";
 // Material UI Component
-import { TextField, Container, Typography, Button } from "@material-ui/core";
+import {
+  TextField,
+  Container,
+  Typography,
+  Button,
+  makeStyles,
+} from "@material-ui/core";
 // React Helmet
 import { Helmet } from "react-helmet";
 // Formik and form validation
 import { useFormik } from "formik";
 import { registerValidationShema } from "./registerValidationSchema";
+import { useStyles } from "../customHooks/useStyles";
 
 const Register = () => {
   const formik = useFormik({
@@ -20,6 +27,8 @@ const Register = () => {
     },
   });
 
+  const classes = useStyles();
+
   return (
     <Container>
       {/* React Helmet */}
@@ -27,10 +36,11 @@ const Register = () => {
         <title>Register Page</title>
       </Helmet>
       <form onSubmit={formik.handleSubmit}>
-        <Typography variant="h3" style={{ margin: "12px 0 " }} component="h3">
+        <Typography className={classes.title} variant="h3" style={{ margin: "12px 0 " }} component="h3">
           Register
         </Typography>
         <TextField
+          className={classes.textInput}
           id="fullname"
           label="Fullname"
           type="text"
@@ -43,6 +53,7 @@ const Register = () => {
           helperText={formik.touched.fullname && formik.errors.fullname}
         />
         <TextField
+          className={classes.textInput}
           id="email"
           label="Email"
           type="email"
@@ -55,6 +66,7 @@ const Register = () => {
           helperText={formik.touched.email && formik.errors.email}
         />
         <TextField
+          className={classes.textInput}
           id="password"
           type="password"
           variant="outlined"
