@@ -15,11 +15,11 @@ import { useStyles } from "../customHooks/useStyles";
 // React Router
 import {Link} from 'react-router-dom'
 
-const ProductCard = ({ title, image, price, category }) => {
+const ProductCard = ({ title, image, price, category,productId }) => {
   const classes = useStyles();
 
   return (
-    <Link to="/product" style={{textDecoration:'none'}}>
+    <Link to={`product/${productId}`} style={{textDecoration:'none'}}>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia

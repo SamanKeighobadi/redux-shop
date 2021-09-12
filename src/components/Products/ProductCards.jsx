@@ -32,6 +32,7 @@ const ProductCards = () => {
                 image={product.image}
                 category={product.category}
                 price={product.price}
+                productId={product.id}
               />
             </Grid>
           ))}
