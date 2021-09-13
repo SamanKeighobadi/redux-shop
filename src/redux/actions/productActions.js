@@ -5,5 +5,5 @@ export const setProducts = (products) => {
 }
 
 export const selectedProduct = (product) => {
-    return {type:ACTIONSTYPES.SELECTED_PRODUCTS,payload:product}
+    return {type:ACTIONSTYPES.SELECTED_PRODUCT,payload:product}
 }

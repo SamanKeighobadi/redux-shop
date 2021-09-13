@@ -19,6 +19,7 @@ const ProductCards = () => {
 
   dispatch(setProducts(data));
 
+
   return (
     <>
       {loading ? (

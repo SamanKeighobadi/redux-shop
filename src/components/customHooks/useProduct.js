@@ -1,4 +1,6 @@
+
 import axios from "axios";
+import React from 'react'
 import { useState, useEffect } from "react";
 
 const useProduct = (url) => {
@@ -7,7 +9,7 @@ const useProduct = (url) => {
 
   const fetchDetailData = async () => {
     try {
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(url).catch(err => console.log(err));
       setData(data);
       setLoading(false);
     } catch (error) {

@@ -17,7 +17,7 @@ export const useStyles = makeStyles({
       objectFit:'contain'
   },
   card:{
-      margin:'20px 0 0 0',
+      margin:'10px 0 0 0',
 
   },
   loadingContainer:{
