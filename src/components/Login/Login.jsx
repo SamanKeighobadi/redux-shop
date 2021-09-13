@@ -23,7 +23,7 @@ const Login = () => {
   const classes = useStyles()
 
   return (
-    <Container>
+    <Container maxWidth={'sm'}  >
       {/* React Helmet */}
       <Helmet>
         <title>Login Page</title>

@@ -19,7 +19,6 @@ const ProductCards = () => {
 
   dispatch(setProducts(data));
 
-
   return (
     <>
       {loading ? (
@@ -27,7 +26,7 @@ const ProductCards = () => {
       ) : (
         <Grid container spacing={4}>
           {products.map((product) => (
-            <Grid  item xs={12} md={3} lg={3}  key={product.id}>
+            <Grid item xs={12} md={4} lg={3} sm={6} key={product.id}>
               <ProductCard
                 title={product.title}
                 image={product.image}

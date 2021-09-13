@@ -8,10 +8,10 @@ import { selectedProduct } from "../../redux/actions/productActions";
 import { useParams } from "react-router-dom";
 // Import Custom Components
 import Loading from "../common/Loading";
-import { Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import ProductDetailsDescription from "./ProductDetailsDescription";
 import ProductDetailsImage from "./ProductDetailsImage";
-import {Helmet} from 'react-helmet'
+import { Helmet } from "react-helmet";
 import axios from "axios";
 
 const ProductDetails = () => {
@@ -45,7 +45,6 @@ const ProductDetails = () => {
 
   return (
     <div>
-
       <Helmet>
         <title>{product.title}</title>
       </Helmet>

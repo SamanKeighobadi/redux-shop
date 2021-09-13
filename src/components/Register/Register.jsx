@@ -6,12 +6,12 @@ import {
   Typography,
   Button,
 } from "@material-ui/core";
+import { useStyles } from "../customHooks/useStyles";
 // React Helmet
 import { Helmet } from "react-helmet";
 // Formik and form validation
 import { useFormik } from "formik";
 import { registerValidationShema } from "./registerValidationSchema";
-import { useStyles } from "../customHooks/useStyles";
 
 const Register = () => {
   const formik = useFormik({
@@ -29,7 +29,7 @@ const Register = () => {
   const classes = useStyles();
 
   return (
-    <Container>
+    <Container maxWidth={'sm'}>
       {/* React Helmet */}
       <Helmet>
         <title>Register Page</title>
