@@ -10,6 +10,7 @@ import Loading from "../common/Loading";
 import { selectedProduct } from "../../redux/actions/productActions";
 import axios from "axios";
 import { Grid, Typography, ImageListItem } from "@material-ui/core";
+import ProductDetailsDescription from "./ProductDetailsDescription";
 import ProductDetailsImage from "./ProductDetailsImage";
 
 const ProductDetails = () => {
@@ -54,7 +55,13 @@ const ProductDetails = () => {
                 title={product.title}
               />
             </Grid>
-            <Grid item xs={12} md={6}></Grid>
+            <Grid item xs={12} md={6}>
+              <ProductDetailsDescription
+                description={product.description}
+                category={product.category}
+                price={product.price}
+              />
+            </Grid>
           </Grid>
         </div>
       )}
