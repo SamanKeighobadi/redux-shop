@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../common/Loading";
 import { selectedProduct } from "../../redux/actions/productActions";
 import axios from "axios";
-import { Grid, Typography, ImageListItem } from "@material-ui/core";
+import { Grid} from "@material-ui/core";
 import ProductDetailsDescription from "./ProductDetailsDescription";
 import ProductDetailsImage from "./ProductDetailsImage";
 
