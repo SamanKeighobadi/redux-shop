@@ -1,17 +1,18 @@
 import React from "react";
 // Redux Tools
 import { useSelector, useDispatch } from "react-redux";
+import { selectedProduct } from "../../redux/actions/productActions";
 // Import Custom hook
-import useProduct from "../customHooks/useProduct";
+// import useProduct from "../customHooks/useProduct";
 // React Router
 import { useParams } from "react-router-dom";
 // Import Custom Components
 import Loading from "../common/Loading";
-import { selectedProduct } from "../../redux/actions/productActions";
-import axios from "axios";
 import { Grid} from "@material-ui/core";
 import ProductDetailsDescription from "./ProductDetailsDescription";
 import ProductDetailsImage from "./ProductDetailsImage";
+
+import axios from "axios";
 
 const ProductDetails = () => {
   const [loading, setLoading] = React.useState(true);

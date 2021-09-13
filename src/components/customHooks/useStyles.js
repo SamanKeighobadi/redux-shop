@@ -27,5 +27,11 @@ export const useStyles = makeStyles({
     textAlign:'center',
     marginTop:'200px'
   },
- 
+ title:{
+   margin:'15px 0'
+ },
+ image:{
+   padding:'15px',
+    objectFit:'fill'
+ }
 });
