@@ -12,7 +12,20 @@ export const prodcutReducer = (state = [], { type, payload }) => {
 export const selectedProductReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case ACTIONSTYPES.SELECTED_PRODUCT:
-      return { ...state,...payload};
+      return { ...state, ...payload };
+    default:
+      return state;
+  }
+};
+
+export const cartReducer = (state=[], { type, payload }) => {
+  switch (type) {
+    case ACTIONSTYPES.ADD_TO_CART:
+      return {...state,payload};
+    case ACTIONSTYPES.REMOVE_FROM_CART:
+      return {};
+    case ACTIONSTYPES.QUANTITY:
+      return {};
     default:
       return state;
   }

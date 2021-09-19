@@ -1,6 +1,6 @@
 import React from 'react';
 // Materuial UI Components
-import {Container,Typography} from '@material-ui/core'
+import {Container} from '@material-ui/core'
 
 const AppCart = () => {
     return (
